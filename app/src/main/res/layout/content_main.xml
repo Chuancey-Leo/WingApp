@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.wing.wapp.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:id="@+id/ly_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_white"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/tab_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/w_index"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/bg_white"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_selector_blog"
+                android:checked="true"
+                android:gravity="center_horizontal|bottom"
+                android:paddingTop="2dp"
+                android:text="博客"
+                android:textColor="@color/text_gray" />
+
+            <RadioButton
+                android:id="@+id/w_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/bg_white"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_selector_status"
+                android:gravity="center_horizontal|bottom"
+                android:paddingTop="2dp"
+                android:text="动弹"
+                android:textColor="@color/text_gray" />
+
+            <RadioButton
+                android:id="@+id/w_send"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/bg_white"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_selector_flower"
+                android:gravity="center_horizontal|bottom"
+                android:paddingTop="2dp"
+                android:text=""
+                android:textColor="@color/text_gray" />
+
+            <RadioButton
+                android:id="@+id/w_experience"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/bg_white"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_selector_experience"
+                android:gravity="center_horizontal|bottom"
+                android:paddingTop="2dp"
+                android:text="经验"
+                android:textColor="@color/text_gray" />
+
+            <RadioButton
+                android:id="@+id/w_wing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@color/bg_white"
+                android:button="@null"
+                android:drawableTop="@drawable/tab_selector_about"
+                android:gravity="center_horizontal|bottom"
+                android:paddingTop="2dp"
+                android:text="about"
+                android:textColor="@color/text_gray" />
+        </RadioGroup>
+    </LinearLayout>
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/view_gray"
+        android:layout_above="@id/ly_tab_bar"/>
+    <FrameLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_view"
+        android:layout_above="@id/div_tab_bar" />
+</RelativeLayout>

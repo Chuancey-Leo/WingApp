@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "org.wing.wapp"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile files('libs/fastjson.jar')
+    compile files('libs/okhttp-2.6.0-leancloud.jar')
+    compile files('libs/okio-1.6.0-leancloud.jar')
+    compile files('libs/avoscloud-statistics-v3.14.5.jar')
+    compile files('libs/prettytime-3.2.5.Final.jar')
+    compile files('libs/avoscloud-sdk-v3.14.5.jar')
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile files('libs/support-v4-23.3.0-sources.jar')
+}
